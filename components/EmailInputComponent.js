@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Ink from 'react-ink';
 import classNames from 'classnames';
 import { useSubmitLead } from '@/hooks/useSubmitLead';
 
@@ -34,10 +35,11 @@ const EmailInputComponent = ({ id, className, buttonBgColor = '#49C44F' }) => {
       </div>
       <button
         type="submit"
-        className="w-full sm:w-auto h-[59px] px-11 py-3 text-white font-medium text-lg rounded-full sm:ml-4"
+        className="w-full sm:w-auto h-[59px] px-11 py-3 text-white font-medium text-lg rounded-full sm:ml-4 relative"
         style={{ backgroundColor: buttonBgColor }}
       >
         Submit
+        <Ink />
       </button>
     </form>
   );
