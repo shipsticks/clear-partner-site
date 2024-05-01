@@ -40,9 +40,9 @@ const Navbar = () => {
           leaveTo="opacity-0 scale-95"
           className="absolute top-full left-0 right-0 lg:hidden shadow-md"
         >
-          <ul className="flex flex-col bg-white text-right">
+          <ul className="flex flex-col bg-white">
             {menuItems.slice(0, -1).map((item) => (
-              <li key={item.name} onClick={() => window.location.href = getFullUrl(item.path)} className={`flex items-center justify-end text-black h-16 pr-4 text-base border-b-[1px] border-gray-200 hover:text-white hover:bg-[#49C44F] ${item.extraClasses || ''}`}>
+              <li key={item.name} onClick={() => window.location.href = getFullUrl(item.path)} className={`flex items-center justify-start text-black h-16 pl-8 text-base border-b-[1px] border-gray-200 hover:text-white hover:bg-[#49C44F] ${item.extraClasses || ''}`}>
                 <a href={getFullUrl(item.path)}>{item.name}</a>
               </li>
             ))}
