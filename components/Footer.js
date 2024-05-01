@@ -59,7 +59,7 @@ const Footer = () => {
             <a href={getFullUrl("/partners")} className="hover:text-white mb-2">Become a partner</a>
           </div>
           {/* Column: Account */}
-          <div className="flex flex-col flex-1 lg:pt-24">
+          <div className="flex flex-col flex-1 lg:pt-2">
             <h5 className="text-white text-[22px] sm:text-2xl lg:text-lg xl:text-[22px] font-semibold mb-4">Account</h5>
             <a href={getFullUrl("/login")} className="hover:text-white mb-2">Login</a>
             <a href={getFullUrl("/register")} className="hover:text-white mb-2">Register</a>
