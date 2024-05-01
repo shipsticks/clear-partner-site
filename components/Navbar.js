@@ -54,8 +54,8 @@ const Navbar = () => {
 
         {/* Menu Items for desktop */}
         <ul className="hidden lg:flex items-center space-x-4">
-          {menuItems.map((item) => (
-            <li key={item.name} className={`text-white text-base hover:text-green-300 ${item.extraClasses || ''}`}>
+          {menuItems.map((item, index) => (
+            <li key={item.name} className={`text-white text-base ${index !== menuItems.length - 1 ? 'hover:text-[#6ad687]' : ''} ${item.extraClasses || ''}`}>
               <a href={getFullUrl(item.path)}>{item.name}</a>
             </li>
           ))}
