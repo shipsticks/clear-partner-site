@@ -81,7 +81,7 @@ const Footer = () => {
           {/* Column: Get in touch */}
           <div className="flex flex-col lg:text-right">
             <h5 className="text-white text-[22px] sm:text-2xl lg:text-lg xl:text-[22px] font-semibold mb-4">Get in touch</h5>
-            <p className="mb-2">324 Datura Street, Suite 400<br />West Palm Beach<br /> Florida 33401</p>
+            <p className="mb-2">11400 Jog Rd, Suite 300<br />West Palm Beach<br /> Florida 33418</p>
             <a className="mb-2" href="tel:8557927529">(855) 792-7529</a>
             <a className="hover:text-white mb-2" href="mailto:info@shipplay.com">info@shipplay.com</a>
           </div>
