@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Transition } from '@headlessui/react';
 import { getFullUrl } from "@/utils/utils";
+import RippleButton from "./RippleButton";
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 const Navbar = () => {
@@ -42,13 +43,20 @@ const Navbar = () => {
         >
           <ul className="flex flex-col bg-white">
             {menuItems.slice(0, -1).map((item) => (
-              <li key={item.name} onClick={() => window.location.href = getFullUrl(item.path)} className={`flex items-center justify-start text-black h-16 pl-8 text-base border-b-[1px] border-gray-200 hover:text-white hover:bg-[#49C44F] ${item.extraClasses || ''}`}>
+              <RippleButton
+                key={item.name}
+                onClick={() => window.location.href = getFullUrl(item.path)}
+                className={`flex items-center justify-start text-black h-16 pl-8 text-base border-b-[1px] border-gray-200 ${item.extraClasses || ''}`}
+              >
                 <a href={getFullUrl(item.path)}>{item.name}</a>
-              </li>
+              </RippleButton>
             ))}
-            <button onClick={() => window.location.href = menuItems[menuItems.length - 1].href} className="flex items-center justify-center bg-[#49C44F] text-white rounded-full py-2 px-4 my-6 h-[48px] w-3/4 max-w-72 mx-auto">
-              <a href={menuItems[menuItems.length - 1].href}>{menuItems[menuItems.length - 1].name}</a>
-            </button>
+            <RippleButton
+              onClick={() => window.location.href = getFullUrl(menuItems[menuItems.length - 1].path)}
+              className="flex items-center justify-center bg-[#49C44F] text-white rounded-full py-2 px-4 my-6 h-[48px] w-3/4 max-w-72 mx-auto"
+            >
+              <a href={getFullUrl(menuItems[menuItems.length - 1].path)}>{menuItems[menuItems.length - 1].name}</a>
+            </RippleButton>
           </ul>
         </Transition>
 
